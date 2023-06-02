@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homePage</title>
+    <link rel="stylesheet" th:href="@{/css/homepage.css}">
+</head>
+
+<body>
+    <!--页头-->
+    <header>
+        <h1>My Bloooog</h1>
+        <button id="user-id">
+            <a th:href="@{/mypage/blog/list}"><b>My page</b></a>
+        </button>
+    </header>
+
+    <!--页头底下的按钮-->
+    <div class="buttonDiv">
+        <ul id="ul">
+            <!-- Home按钮 -->
+            <li id="home"><a th:href="@{/user/blog/homepage}" id="head-home" class="button active">Home</a></li>
+            <!-- Articles按钮 -->
+            <li id="articles"><a th:href="@{/user/blog/register}" id="head-articles" class="button active">New Articles</a></li>
+            <!-- 退出登录按钮 -->
+            <li id="logout"><a th:href="@{/user/login}" id="head-logout" class="button active">Logout</a></li>
+        </ul>
+    </div>
+
+    <!--插入图片-->
+    <section class="main-section">
+        <div class="blog-post">
+            
+                <img class="image" th:src="@{/blog-image/snow.jpg}" th:alt="snow" />
+
+            
+        </div>
+
+        <!--插入内容-->
+        <div class="blog-content">
+            <h1 class="content-title">(sample)It looks like a fox tree!</h1>
+            <div class="content-text" placeholder="Enter anything that you want to write">
+              
+                    <p id="p">One winter, a fox dove into the snow, looking adorable. Covered in white flakes, it looks like a fox tree.</p>
+                
+            </div>
+            <div>
+                <h3>Leave your Comment:</h3>
+                <!--插入评论-->
+                <form id="comment-form">
+                    <div class="comment-box">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name"><br>
+                        <label for="comment">Comment:</label>
+                        <input type="text" id="comment">
+                    </div>
+                    <button class="submitButton" type="submit">Submit</button>
+                </form>
+            </div>
+            <!-- 用于显示评论的容器 -->
+            <div id="comment-container"></div>
+        </div>
+    </section>
+
+    <h2 class="list-title">Blog List</h2>
+
+    <div class="list-div" th:each="blog:${contents}">
+ 
+        <h2 class="list-title"><a th:href="@{'/user/blog/details/' + ${blog.blogId}}" th:text="${blog.blogTitle}"></a></h2>
+    </div>
+
+    <script th:src="@{/js/homepage.js}"></script>
+
+</body>
+
+</html>
+
+
+</html>
+
+<!--
+        -編集の仕方
+        <input type="file">//指可以导入文件
+        <a href="/blog/edit/id">
+            <img src="" alt="">
+            <p>aaa</p>
+            <p>aaaa</p>
+        </a>
+      
+   -->

@@ -1,0 +1,218 @@
+/* 页头 */
+header {
+    background-color: #12c2e9;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* 页面整体 */
+  body {
+    background-color: #9ec7de;
+  }
+  
+  /* 按钮位置的div */
+  .buttonDiv {
+    background-color: #c0d3a7;
+    padding: 10px;
+  }
+  
+  .blog-post{
+	  width: 50%;
+  }
+  .blog-post img{
+	  width: 100%;
+  }
+  
+  
+  #home,#articles,
+#logout {
+  display: inline-block;
+  /* 将display属性修改为inline-block，以便横向排列按钮 */
+  margin-right: 20px;
+  /* 右边距 */
+}
+
+ /* 设置lhome的按钮模式 */
+  #home a:hover {
+    background-color: #259840;
+    color: #fff /* 设置按钮鼠标悬停样式 */;
+  }
+  
+  /* 设置articles的按钮模式 */
+  #articles a:hover {
+    background-color: #259840;
+    color: #fff /* 设置按钮鼠标悬停样式 */;
+  }
+  
+   /* 设置logout的按钮模式 */
+  #logout a:hover {
+    background-color: #259840;
+    color: #fff /* 设置按钮鼠标悬停样式 */;
+  }
+  
+  
+  .button active{
+	  padding: 10px 20px;
+  text-decoration: none;
+  color: #259840;
+  background-color: #ffffff;
+  border-radius: 20px;
+	  
+  }
+  
+  /* 设置按钮里的文字的初始样式 */
+  a {
+    padding: 10px;
+    text-decoration: none;
+    /* 把下划线去掉 */
+    color: #259840;
+    background-color: #ffffff;
+    border-radius: 20px;
+    /* 圆角 */
+  }
+ 
+
+/* 设置文本内容的 div 在图片右侧 */
+.blog-content {
+  margin-left: 20px;
+  width: 50%;
+}
+
+/* 设置 title 颜色 */
+.content-title {
+  color: #2b6397;
+}
+
+/* 设置文本内容 */
+.content-text {
+  overflow-wrap: break-word;/*自动换行*/
+  overflow: hidden;
+  /* 清除浮动效果 */
+  border: 1px solid #ffffff;
+  box-shadow: 0px 5px 10px #1a93c6;
+  position: relative;
+  background-color: #ffffff;
+  width: 80%;
+  height: 100px;
+  border-radius: 20px;
+  color: #259840;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1rem;
+}
+
+/* 设置 "comment:" 的颜色 */
+h3 {
+  color: #2b6397;
+  
+}
+
+/* 设置 comment 的整个 div 的样式 */
+.comment-box {
+  color: #2b6397;
+  overflow: hidden;
+  /* 清除浮动效果 */
+  border: 1px solid #ffffff;
+  box-shadow: 0px 5px 10px #1a93c6;
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  border-radius: 30px;
+}
+
+/* 设置送信按钮的颜色 */
+.submitButton {
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #259840;
+  border-radius: 20px;
+  border: #c0d3a7;
+  padding: 10px;
+}
+
+.submitButton:hover {
+  background-color: #d8b9f5;
+}
+
+/* 画像と入力する form を横並びにする */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#name,
+#comment {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #f2fdfc;
+  display: block;
+  margin-bottom: 5px;
+  outline: none;
+  /* 去除默认的边框线 */
+  border: 2px solid rgb(193, 211, 228);
+}
+
+#p {
+  color: #2b6397;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.next-button {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* 添加评论容器的样式 */
+#comment-container {
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+/* 添加评论项的样式 */
+.comment-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* 添加姓名的样式 */
+.comment-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2b6397;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 添加评论内容的样式 */
+.comment-content {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* 添加删除按钮的样式 */
+.comment-delete {
+  font-size: 12px;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #259840;
+  border-radius: 20px;
+}
+
+.comment-delete:hover {
+  background-color: #12c2e9;
+}
+
+
+

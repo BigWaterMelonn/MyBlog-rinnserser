@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>userPage</title>
+	<link rel="stylesheet" th:href="@{/css/userPage.css}">
+</head>
+
+<body>
+	<!--页头-->
+	<header>
+		<h1>My Page</h1>
+
+	</header>
+
+	<!--页头底下的按钮-->
+	<div class="buttonDiv">
+		<ul id="ul">
+			<!-- Home按钮 -->
+			<li id="home"><a th:href="@{/user/blog/homepage}" id="head-home" class="button active">Home</a></li>
+			<!-- Articles按钮 -->
+			<li id="articles"><a th:href="@{/user/blog/register}" id="head-articles" class="button active">New
+					Articles</a></li>
+			<!-- 退出登录按钮 -->
+			<li id="logout"><a th:href="@{/user/login}" id="head-logout" class="button active">Logout</a></li>
+		</ul>
+</div>
+
+
+<h1 class="blog-list">My blog list</h1>  <!-- 博客列表标题 -->
+    <div class="list-div" th:each="blog:${userData}">
+        <form th:action="@{/mypage/blog/update}" method="post" enctype="multipart/form-data">
+            <!-- 博客标题输入框 -->
+            <input class="title-input" type="text" placeholder="Enter article title" name="blogTitle" th:value="${blog.blogTitle}">
+            <!-- 博客内容文本框 -->
+            <textarea class="content-text" placeholder="Enter article content" name="content" th:text="${blog.blogContent}"></textarea>
+            <!-- 存储博客ID的隐藏字段 -->
+            <input type="hidden" name="blogId" th:value="${blog.blogId}">
+          
+            <div class="list-buttons">
+             <!-- 更新博客按钮 -->
+                <button class="edit-button"  id="update" type="submit">Update</button>
+              <!-- 删除博客按钮 -->
+                <button class="edit-button" th:formaction="@{/mypage/blog/delete}">Delete</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

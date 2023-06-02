@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <div>
+        <form th:action="@{/user/login/process}" method="post">
+            <!--title-->
+            <h1>Boooolg Login</h1>
+
+            <!--username-->
+            <p>Username:</p>
+            <input id="username" name="username" type="text" placeholder="Enter username">
+
+            <!--password-->
+            <p>Password:</p>
+            <input id="password" name="password" type="password" placeholder="Enter password">
+
+            <!--button-->
+            <input class="button" type="submit" value="Login">
+
+            <!--Register-->
+            <p id="ps">
+                Don't have an account?
+              <a th:href="@{/user/register}">Register</a>
+
+            </p>
+        </form>
+    </div>
+
+</body>
+
+</html>

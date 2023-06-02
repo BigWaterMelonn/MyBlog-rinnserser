@@ -1,0 +1,141 @@
+/* 页头 */
+header {
+  background-color: #12c2e9;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+}
+/* 页面整体 */
+body {
+  background-color: #9ec7de;
+}
+
+/* 按钮位置的div */
+.buttonDiv {
+  background-color: #c0d3a7;
+  padding: 10px;
+}
+
+/* 设置两个li的位置 */
+#home,
+#articles,
+#logout {
+  display: inline;
+  /* 设置为行内元素，水平排列 */
+  margin-right: 20px;
+  /* 右边距 */
+}
+
+/* 设置logout的按钮模式 */
+#logout a:hover {
+  background-color: #259840;
+  color: #fff /* 设置按钮鼠标悬停样式 */;
+}
+
+/* 设置按钮里的文字的初始样式 */
+a {
+  padding: 10px;
+  text-decoration: none;
+  /* 把下划线去掉 */
+  color: #259840;
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* 圆角 */
+}
+
+
+/*我的博客列表*/
+.blog-list{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2b6397;
+  margin-bottom: 5px;
+}
+/*列表的div*/
+.list-div{
+  margin-left: 20px;
+  width: 80%;
+  height: 200px;
+  background-color: #ffffffbd;
+  color:#2b6397;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px#50c9ea;
+  position: relative;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  overflow: auto; /* 或者使用 overflow: hidden; */
+  max-height: 300px; /* 适当设置父级元素的最大高度 */
+  position: relative
+}
+/*整体右移（因为上面那个是圆角，会突出去一点）*/
+.list-div,.list-title{
+  padding-left: 15px;
+}
+/*把div里的标题下移一点*/
+.list-title{
+  padding-top: 25px;
+}
+
+/*设置编辑博客和删除博客的按钮样式*/
+
+
+.edit-button {
+  background-color: #50c27c;
+  color: #fff;
+  border: none;
+  padding: 20px 10px;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-size: 20px;
+  
+}
+
+.edit-button:hover{
+  background-color: #da7676;
+}
+
+
+#update:hover{
+  background-color: #dfd561;
+}
+.list-buttons {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+
+.title-input{
+  position:absolute;
+  margin-top: 10px;
+  outline: none;
+  color: #1975cb;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 5px 10px #90b4ce;
+  background-color: #ffffff;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content-text{
+  position: absolute;
+  margin-top: 10px;
+
+  outline: none;
+  color: #27ad87;
+  padding: 45px;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 5px 10px  #90b4ce;
+  
+  background-color: #ffffff;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+  bottom: 10px; 
+ 
+}

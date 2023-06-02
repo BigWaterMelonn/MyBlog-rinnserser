@@ -1,0 +1,65 @@
+/* 标题 */
+h1 {
+    color: #12c2e9;
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+/* login框 */
+div {
+    width: 400px;  box-shadow: 0px 5px 10px #1a93c6;
+    /*边框内距*/
+    padding: 20px; 
+    /*和页面顶端的距离*/
+    margin: 50px auto;
+    border-radius: 40px;
+    background-color: #ffffff;
+  
+}
+
+
+/* 文本框 */
+#username,#password{
+    width: 80%;
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(20, 167, 54);
+    font-size: 16px;
+    border-radius: 20px;/*弄成圆角*/
+    
+}
+
+/* 按钮 */
+.button {
+    border-radius: 20px;/*弄成圆角*/
+    background-color: #b5b2d5;
+    /*字体颜色*/
+    color: #ffffff;
+    border: none;
+    padding: 10px ;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+/* 鼠标悬停效果 */
+.button:hover {
+    background-color: #0069d9;
+
+}
+
+#ps{
+    color: rgb(68, 141, 117);
+}
+a{
+    color: brown;
+}
+
+/* 设置页面背景色 */
+body {
+    background-color: #9ec7de;
+}

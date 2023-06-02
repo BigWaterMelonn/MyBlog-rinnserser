@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Article Page</title>
+	<link rel="stylesheet" th:href="@{/css/articlesPage.css}">
+</head>
+
+<body>
+	<!--页头-->
+	<header>
+		<h1>New Article</h1>
+	</header>
+
+	<!--页头底下的按钮-->
+	<div class="buttonDiv">
+		<ul id="ul">
+			<!--button active ，当前页面的活动状态-->
+			<li id="home"><a th:href="@{/user/blog/homepage}" class="button">Home</a></li>
+			<li id="articles"><a th:href="@{/user/blog/registe}" class="button active">New Articles</a></li>
+			<!-- 退出登录按钮 -->
+			<li id="logout"><a th:href="@{/user/login}" class="button active">Logout</a></li>
+		</ul>
+	</div>
+
+	<!--插入图片-->
+	<form th:action="@{/user/blog/register/process}" method="post" enctype="multipart/form-data">
+		<section class="main-section"><!--照片，博客内容，评论都在同一个section里-->
+			<div class="blog-post">
+				<div class="file-input">
+					<input type="file" id="upload-input" name="imageName">
+					<label for="upload-input" id="upload-label">
+						<div id="preview-container">
+							<span id="placeholder-text">Click me to add an image</span>
+							<img id="preview-image" class="image-preview">
+						</div>
+					</label>
+				</div>
+			</div>
+
+			<!--插入内容-->
+			<div class="blog-content">
+				<input class="title-input" type="text" placeholder="Enter article title" name="blogTitle">
+				<textarea class="content-text" placeholder="Enter article content" name="content"></textarea>
+				<!--<div>
+					<h3>Leave your Comment:</h3>
+					<div class="comment-box">
+						<label for="name">Name:</label>
+						<input type="text" id="name" placeholder="Enter your name"><br>
+						<label for="comment">Comment:</label>
+						<input type="text" id="comment" placeholder="Enter your comment">
+					</div>
+					<button class="submitButton" type="submit">Submit</button>
+				</div>-->
+				<button class="submitButton" type="submit">Submit</button>
+			</div>
+		</section>
+	</form>
+	<script th:src="@{/js/articlesPage.js}"></script>
+</body>
+
+</html>

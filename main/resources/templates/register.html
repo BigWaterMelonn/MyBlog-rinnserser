@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" th:href="@{/css/register.css}">
+</head>
+<body>
+    <div class="Register">
+        <h1>Sign Up</h1>
+        <form th:action="@{/user/register/process}" method="post">
+            <!--ユーザー名のテキスト-->
+            <p>Username:</p>
+            <input type="text" class="input" id="username" name="username" placeholder="Enter your username">
+
+            <!--パスワードのテキスト-->
+            <p>Password:</p>
+            <input type="password" class="input" id="password" name="password" placeholder="Enter your password">
+
+            <!--メールアドレスのテキスト-->
+            <p>Email:</p>
+            <input type="email" class="input" id="email" name="email" placeholder="Enter your Email">
+
+            <!--電話番号のテキスト-->
+            <p>Tel:</p>
+            <input type="text" class="input" id="tel" name="tel" placeholder="Enter your phone number">
+
+            <input class="button" type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
+
